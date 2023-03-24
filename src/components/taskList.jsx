@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Task from "./task";
 import Navbar from "./navbar";
-import { generateUniqueId } from "../utils";
+import { generateUniqueId } from "../utils"
 
 const TaskList = () => {
   const [tasks, setTask] = useState([]);
