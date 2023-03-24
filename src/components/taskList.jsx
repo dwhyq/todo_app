@@ -78,7 +78,7 @@ const TaskList = () => {
 
   return (
     <div className="relative h-screen overflow-hidden flex flex-col justify-center">
-      <div className="tasks transition-shadow w-9/12 mt-15 p-3 rounded-xl overflow-auto sm-sc:w-full m-auto">
+      <div className="tasks transition-shadow w-9/12 mt-12 p-3 rounded-xl overflow-auto sm-sc:w-full m-auto">
         {tasks.map((task) => (
           <Task
             task={task}
