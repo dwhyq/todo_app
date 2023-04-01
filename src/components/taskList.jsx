@@ -22,7 +22,7 @@ const TaskList = () => {
   // useEffect(() => {
     // save tasks to local storage
   //   localStorage.setItem("tasks", JSON.stringify(tasks));
-  // }, [tasks]);
+  // }, [tasks])
 
   //Remove past date from the calendar
   const disablePastDate = new Date().toISOString().slice(0, 16);
