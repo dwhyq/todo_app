@@ -2,7 +2,13 @@ body {
   padding: 0;
   margin: 0;
 }
-/* .todoBtn:active {
-  background-color: green;
-  color: blue;
-} */
+
+.valid:active {
+  background-color: red;
+  color: white;
+}
+
+.invalid:active {
+  background-color: blue;
+  color: white;
+}
