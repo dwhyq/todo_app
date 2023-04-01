@@ -109,7 +109,7 @@ const TaskList = () => {
     <div className="relative h-screen overflow-hidden flex flex-col justify-center">
       <div className="tasks transition-shadow w-9/12 mt-12 p-3 rounded-xl overflow-auto sm-sc:w-full m-auto">
       {error && (
-        <p className="fixed bottom-9 left-0 right-0 flex justify-center mb-11 text-red-500">Please add a todo & a date</p>
+        <p className="fixed bottom-9 left-0 right-0 flex justify-center mb-12 text-red-500">Please add a todo & a date</p>
       )}
         {tasks.map((task) => (
           <Task
