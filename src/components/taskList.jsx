@@ -33,8 +33,10 @@ const TaskList = () => {
   //this code creates a new task
   const handleCreateTask = (e) => {
     e.preventDefault();
+
+    //error validation code
     if (!isValidated) {
-      setError(true);
+      setError(true)
     } else {
       setError(false);
     }
