@@ -12,17 +12,21 @@ const TaskList = () => {
   const [newTaskDate, setNewTaskDate] = useState("");
   const [error, setError] = useState(false);
 
-  // useEffect(() => {
+  useEffect(() => {
     // load tasks from local storage
-  //   const storedTask = JSON.parse(localStorage.getItem("tasks") || []);
-  //   setTasks(storedTask);
-  //   console.log(storedTask);
-  // }, []);
+    const storedTask = localStorage.getItem("tasks");
+    if(storedTask !== null){
+      setTasks(JSON.parse(storedTask))
+    }
+    // setTasks(storedTask);
+    console.log(storedTask);
+  }, []);
 
-  // useEffect(() => {
+  useEffect(() => {
     // save tasks to local storage
-  //   localStorage.setItem("tasks", JSON.stringify(tasks));
-  // }, [tasks])
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks])
+
 
   //Remove past date from the calendar
   const disablePastDate = new Date().toISOString().slice(0, 16);
