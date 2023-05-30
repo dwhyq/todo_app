@@ -142,7 +142,8 @@ const TaskList = () => {
           <input
             value={newTaskDate}
             onChange={(e) => {
-              setNewTaskDate(e.target.value);
+              const selectedDate = new Date(e.target.value).toISOString();
+              setNewTaskDate(selectedDate);
             }}
             // bg-black text-white font-bold
             type="datetime-local"
