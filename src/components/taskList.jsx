@@ -14,11 +14,10 @@ const TaskList = () => {
 
   useEffect(() => {
     // load tasks from local storage
-    const storedTask = localStorage.getItem("tasks");
+    let storedTask = localStorage.getItem("tasks");
     if(storedTask !== null){
       setTasks(JSON.parse(storedTask))
     }
-    // setTasks(storedTask);
     console.log(storedTask);
   }, []);
 
@@ -26,7 +25,6 @@ const TaskList = () => {
     // save tasks to local storage
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks])
-
 
   //Remove past date from the calendar
   const disablePastDate = new Date().toISOString().slice(0, 16);
@@ -146,9 +144,10 @@ const TaskList = () => {
             onChange={(e) => {
               setNewTaskDate(e.target.value);
             }}
+            // bg-black text-white font-bold
             type="datetime-local"
             min={disablePastDate}
-            className="m-auto bg-white rounded-tr-full rounded-br-full text-xl outline-none border-none sm:w-fit sm-sc:text-xs sm-sc:w-fit sm-sc:px-[5px] sm-sc:rounded-bl-full sm-sc:rounded-tl-full md:-w-fit md:lg:text-2xl "
+            className="m-auto rounded-tr-full rounded-br-full text-xl outline-none border-none sm:w-fit sm-sc:text-xs sm-sc:w-fit sm-sc:px-[5px] sm-sc:rounded-bl-full sm-sc:rounded-tl-full md:-w-fit md:lg:text-2xl "
           />
           <button
             type="submit"
